@@ -54,11 +54,10 @@ public class NumSearch
         if(from != 0) {
             ArrayList<Double> mas = new ArrayList<>();
             Random r = new Random();
-            int index = from;
             while (mas.size() != N) {
-                Double val = index + r.nextDouble();
+                Double val = from + r.nextDouble();
                 mas.add(val);
-                ++index;
+                ++from;
             }
             return mas;
         } else throw new IllegalArgumentException("'from' can't be equal to 0");
